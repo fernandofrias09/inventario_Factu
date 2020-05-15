@@ -35,7 +35,7 @@
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
             this.cbrol = new System.Windows.Forms.Label();
             this.txtIDUsuario = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             this.gb.Controls.Add(this.txtNombreUsuario);
             this.gb.Controls.Add(this.txtIDUsuario);
             this.gb.Controls.Add(this.cbrol);
-            this.gb.Controls.Add(this.txtApellido);
+            this.gb.Controls.Add(this.lblContraseña);
             this.gb.Controls.Add(this.txtNombre);
             this.gb.Controls.Add(this.label1);
             this.gb.Location = new System.Drawing.Point(12, 75);
@@ -133,14 +133,15 @@
             this.txtNombre.TabIndex = 1;
             this.txtNombre.Text = "Nombre";
             // 
-            // txtApellido
+            // lblContraseña
             // 
-            this.txtApellido.AutoSize = true;
-            this.txtApellido.Location = new System.Drawing.Point(8, 88);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(44, 13);
-            this.txtApellido.TabIndex = 2;
-            this.txtApellido.Text = "Apellido";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(8, 88);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(61, 13);
+            this.lblContraseña.TabIndex = 2;
+            this.lblContraseña.Text = "Contraseña";
+            this.lblContraseña.Click += new System.EventHandler(this.TxtApellido_Click);
             // 
             // cbrol
             // 
@@ -168,7 +169,7 @@
             // 
             // txtApelldioUsuario
             // 
-            this.txtApelldioUsuario.Location = new System.Drawing.Point(58, 85);
+            this.txtApelldioUsuario.Location = new System.Drawing.Point(75, 85);
             this.txtApelldioUsuario.Name = "txtApelldioUsuario";
             this.txtApelldioUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtApelldioUsuario.TabIndex = 6;
@@ -293,7 +294,7 @@
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.TextBox txtIDUsuario;
         private System.Windows.Forms.Label cbrol;
-        private System.Windows.Forms.Label txtApellido;
+        private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;

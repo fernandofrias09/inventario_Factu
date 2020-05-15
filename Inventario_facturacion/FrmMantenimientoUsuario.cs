@@ -21,5 +21,10 @@ namespace Inventario_facturacion
         {
 
         }
+
+        private void TxtApellido_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
