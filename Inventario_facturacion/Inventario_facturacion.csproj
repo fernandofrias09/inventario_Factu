@@ -58,6 +58,18 @@
     <Compile Include="FrmMantenimientoProducto.Designer.cs">
       <DependentUpon>FrmMantenimientoProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMantenimientoRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoRoles.Designer.cs">
+      <DependentUpon>FrmMantenimientoRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMantenimientoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMantenimientoUsuario.Designer.cs">
+      <DependentUpon>FrmMantenimientoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -65,6 +77,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoProducto.resx">
       <DependentUpon>FrmMantenimientoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoRoles.resx">
+      <DependentUpon>FrmMantenimientoRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoUsuario.resx">
+      <DependentUpon>FrmMantenimientoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

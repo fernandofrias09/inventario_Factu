@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Inventario_facturacion
 {
-    public partial class FrmMantenimientoRoles : Form
+    public partial class FrmMantenimientoUsuario : Form
     {
-        public FrmMantenimientoRoles()
+        public FrmMantenimientoUsuario()
         {
             InitializeComponent();
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void Label4_Click(object sender, EventArgs e)
         {
 
         }
