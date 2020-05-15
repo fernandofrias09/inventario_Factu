@@ -16,5 +16,14 @@ namespace Inventario_facturacion
             cn.Open();           
             return cn;
         }
+        public static DataTable LlenarDGV(string Consulta)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand(Consulta, Conexion.Conectar());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
     }
 }

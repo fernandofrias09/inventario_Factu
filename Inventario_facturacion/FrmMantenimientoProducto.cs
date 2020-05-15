@@ -26,5 +26,21 @@ namespace Inventario_facturacion
         {
 
         }
+
+        private void FrmMantenimientoProducto_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+                string consulta = "select * from Producto";
+                Conexion.Conectar();                
+                dgvProducto.DataSource = Conexion.LlenarDGV(consulta);
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+        }
     }
 }

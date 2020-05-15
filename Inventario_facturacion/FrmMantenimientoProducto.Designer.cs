@@ -220,6 +220,7 @@
             // 
             // dgvProducto
             // 
+            this.dgvProducto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducto.Location = new System.Drawing.Point(1, 389);
             this.dgvProducto.Name = "dgvProducto";
@@ -299,6 +300,7 @@
             this.Controls.Add(this.gbDescripcion);
             this.Name = "FrmMantenimientoProducto";
             this.Text = "Producto";
+            this.Load += new System.EventHandler(this.FrmMantenimientoProducto_Load);
             this.gbDescripcion.ResumeLayout(false);
             this.gbDescripcion.PerformLayout();
             this.GbBotones.ResumeLayout(false);
