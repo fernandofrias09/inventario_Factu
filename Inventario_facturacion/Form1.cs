@@ -15,6 +15,7 @@ namespace Inventario_facturacion
         public FrmLogin()
         {
             InitializeComponent();
+            pictureBox1.Image = Image.FromFile("user.png");
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -49,17 +50,24 @@ namespace Inventario_facturacion
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                MessageBox.Show("login exitoso");
+                MenuPrincipal mp = new MenuPrincipal();
+                mp.Show();
             }
             else
             {
                 MessageBox.Show("Datos Incorrecto");
             }
+            dr.Close();
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             logins();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
