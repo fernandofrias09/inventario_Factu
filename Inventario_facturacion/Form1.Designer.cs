@@ -90,6 +90,7 @@
             this.btnAceptar.TabIndex = 5;
             this.btnAceptar.Text = "Seguir";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // btnSalir
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.lblUsuario);
             this.Name = "FrmLogin";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -31,19 +31,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNombreRoles = new System.Windows.Forms.TextBox();
+            this.txtIDRoles = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIDRoles = new System.Windows.Forms.TextBox();
-            this.txtNombreRoles = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.dgvRoles = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.chbID = new System.Windows.Forms.CheckBox();
-            this.chbNombre = new System.Windows.Forms.CheckBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.chbNombre = new System.Windows.Forms.CheckBox();
+            this.chbID = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -83,6 +83,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Caracteristicas";
             // 
+            // txtNombreRoles
+            // 
+            this.txtNombreRoles.Location = new System.Drawing.Point(64, 87);
+            this.txtNombreRoles.Name = "txtNombreRoles";
+            this.txtNombreRoles.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreRoles.TabIndex = 5;
+            // 
+            // txtIDRoles
+            // 
+            this.txtIDRoles.Location = new System.Drawing.Point(64, 38);
+            this.txtIDRoles.Name = "txtIDRoles";
+            this.txtIDRoles.Size = new System.Drawing.Size(100, 20);
+            this.txtIDRoles.TabIndex = 4;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -102,20 +116,6 @@
             this.label1.Text = "ID";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // txtIDRoles
-            // 
-            this.txtIDRoles.Location = new System.Drawing.Point(64, 38);
-            this.txtIDRoles.Name = "txtIDRoles";
-            this.txtIDRoles.Size = new System.Drawing.Size(100, 20);
-            this.txtIDRoles.TabIndex = 4;
-            // 
-            // txtNombreRoles
-            // 
-            this.txtNombreRoles.Location = new System.Drawing.Point(64, 87);
-            this.txtNombreRoles.Name = "txtNombreRoles";
-            this.txtNombreRoles.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreRoles.TabIndex = 5;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnNuevo);
@@ -128,14 +128,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
-            // btnEditar
+            // btnNuevo
             // 
-            this.btnEditar.Location = new System.Drawing.Point(59, 67);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(59, 24);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 3;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // btnBorrar
             // 
@@ -146,17 +146,18 @@
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             // 
-            // btnNuevo
+            // btnEditar
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(59, 24);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 3;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(59, 67);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // dgvRoles
             // 
+            this.dgvRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoles.Location = new System.Drawing.Point(12, 324);
             this.dgvRoles.Name = "dgvRoles";
@@ -175,15 +176,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Busqueda";
             // 
-            // chbID
+            // btnBuscar
             // 
-            this.chbID.AutoSize = true;
-            this.chbID.Location = new System.Drawing.Point(43, 24);
-            this.chbID.Name = "chbID";
-            this.chbID.Size = new System.Drawing.Size(37, 17);
-            this.chbID.TabIndex = 0;
-            this.chbID.Text = "ID";
-            this.chbID.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(348, 24);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // chbNombre
             // 
@@ -195,14 +195,15 @@
             this.chbNombre.Text = "Nombre";
             this.chbNombre.UseVisualStyleBackColor = true;
             // 
-            // btnBuscar
+            // chbID
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(348, 24);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.chbID.AutoSize = true;
+            this.chbID.Location = new System.Drawing.Point(43, 24);
+            this.chbID.Name = "chbID";
+            this.chbID.Size = new System.Drawing.Size(37, 17);
+            this.chbID.TabIndex = 0;
+            this.chbID.Text = "ID";
+            this.chbID.UseVisualStyleBackColor = true;
             // 
             // FrmMantenimientoRoles
             // 
@@ -216,6 +217,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmMantenimientoRoles";
             this.Text = "Mantenimiento Roles";
+            this.Load += new System.EventHandler(this.FrmMantenimientoRoles_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
