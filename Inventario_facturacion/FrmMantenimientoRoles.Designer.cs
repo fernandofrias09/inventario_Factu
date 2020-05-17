@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -118,6 +119,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Controls.Add(this.btnNuevo);
             this.groupBox2.Controls.Add(this.btnBorrar);
             this.groupBox2.Controls.Add(this.btnEditar);
@@ -128,6 +130,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(59, 54);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
             // btnNuevo
             // 
             this.btnNuevo.Location = new System.Drawing.Point(59, 24);
@@ -136,6 +148,7 @@
             this.btnNuevo.TabIndex = 3;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // btnBorrar
             // 
@@ -148,7 +161,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(59, 67);
+            this.btnEditar.Location = new System.Drawing.Point(59, 82);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 1;
@@ -248,5 +261,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.CheckBox chbNombre;
         private System.Windows.Forms.CheckBox chbID;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

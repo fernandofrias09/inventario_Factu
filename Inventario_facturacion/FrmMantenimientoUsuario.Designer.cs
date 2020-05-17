@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.gb = new System.Windows.Forms.GroupBox();
             this.cbRolUsuario = new System.Windows.Forms.ComboBox();
-            this.txtApelldioUsuario = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtIDUsuario = new System.Windows.Forms.TextBox();
             this.cbrol = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             this.txtNombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -78,7 +79,7 @@
             // gb
             // 
             this.gb.Controls.Add(this.cbRolUsuario);
-            this.gb.Controls.Add(this.txtApelldioUsuario);
+            this.gb.Controls.Add(this.txtContraseña);
             this.gb.Controls.Add(this.txtNombreUsuario);
             this.gb.Controls.Add(this.txtIDUsuario);
             this.gb.Controls.Add(this.cbrol);
@@ -100,12 +101,12 @@
             this.cbRolUsuario.Size = new System.Drawing.Size(121, 21);
             this.cbRolUsuario.TabIndex = 7;
             // 
-            // txtApelldioUsuario
+            // txtContraseña
             // 
-            this.txtApelldioUsuario.Location = new System.Drawing.Point(75, 85);
-            this.txtApelldioUsuario.Name = "txtApelldioUsuario";
-            this.txtApelldioUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtApelldioUsuario.TabIndex = 6;
+            this.txtContraseña.Location = new System.Drawing.Point(75, 85);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.TabIndex = 6;
             // 
             // txtNombreUsuario
             // 
@@ -161,6 +162,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.BtnEditar);
             this.groupBox2.Controls.Add(this.btnNuevo);
@@ -170,6 +172,16 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(65, 48);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -182,7 +194,7 @@
             // 
             // BtnEditar
             // 
-            this.BtnEditar.Location = new System.Drawing.Point(65, 64);
+            this.BtnEditar.Location = new System.Drawing.Point(65, 83);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(75, 23);
             this.BtnEditar.TabIndex = 1;
@@ -197,6 +209,7 @@
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // groupBox3
             // 
@@ -292,7 +305,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvUsuario;
         private System.Windows.Forms.ComboBox cbRolUsuario;
-        private System.Windows.Forms.TextBox txtApelldioUsuario;
+        private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.TextBox txtIDUsuario;
         private System.Windows.Forms.Label cbrol;
@@ -307,5 +320,6 @@
         private System.Windows.Forms.CheckBox chbNombre;
         private System.Windows.Forms.CheckBox chbID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

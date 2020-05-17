@@ -29,29 +29,30 @@
         private void InitializeComponent()
         {
             this.gbDescripcion = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TxtID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCosto = new System.Windows.Forms.TextBox();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtCosto = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.TxtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.GbBotones = new System.Windows.Forms.GroupBox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LblBallonsupp = new System.Windows.Forms.Label();
             this.dgvProducto = new System.Windows.Forms.DataGridView();
             this.GbProductosRegistrados = new System.Windows.Forms.GroupBox();
-            this.chbID = new System.Windows.Forms.CheckBox();
-            this.chbPrecio = new System.Windows.Forms.CheckBox();
-            this.chbNombre = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.chbNombre = new System.Windows.Forms.CheckBox();
+            this.chbPrecio = new System.Windows.Forms.CheckBox();
+            this.chbID = new System.Windows.Forms.CheckBox();
             this.gbDescripcion.SuspendLayout();
             this.GbBotones.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -79,48 +80,33 @@
             this.gbDescripcion.Text = "Descripcion";
             this.gbDescripcion.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
-            // label1
+            // txtPrecio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.txtPrecio.Location = new System.Drawing.Point(371, 155);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.TabIndex = 12;
             // 
-            // TxtID
+            // txtCantidad
             // 
-            this.TxtID.Location = new System.Drawing.Point(72, 37);
-            this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(100, 20);
-            this.TxtID.TabIndex = 1;
+            this.txtCantidad.Location = new System.Drawing.Point(371, 94);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
+            this.txtCantidad.TabIndex = 11;
             // 
-            // label2
+            // txtCosto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nombre";
+            this.txtCosto.Location = new System.Drawing.Point(371, 33);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(100, 20);
+            this.txtCosto.TabIndex = 10;
             // 
-            // label3
+            // txtNombre
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 37);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Costo";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(316, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cantidad";
+            this.txtNombre.Location = new System.Drawing.Point(85, 127);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.TabIndex = 9;
             // 
             // label5
             // 
@@ -131,36 +117,52 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Precio";
             // 
-            // txtNombre
+            // label4
             // 
-            this.txtNombre.Location = new System.Drawing.Point(85, 127);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(316, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Cantidad";
             // 
-            // txtCosto
+            // label3
             // 
-            this.txtCosto.Location = new System.Drawing.Point(371, 33);
-            this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(100, 20);
-            this.txtCosto.TabIndex = 10;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(331, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Costo";
             // 
-            // txtCantidad
+            // label2
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(371, 94);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(100, 20);
-            this.txtCantidad.TabIndex = 11;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nombre";
             // 
-            // txtPrecio
+            // TxtID
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(371, 155);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecio.TabIndex = 12;
+            this.TxtID.Location = new System.Drawing.Point(72, 37);
+            this.TxtID.Name = "TxtID";
+            this.TxtID.Size = new System.Drawing.Size(100, 20);
+            this.TxtID.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID";
             // 
             // GbBotones
             // 
+            this.GbBotones.Controls.Add(this.btnAgregar);
             this.GbBotones.Controls.Add(this.BtnBorrar);
             this.GbBotones.Controls.Add(this.btnNuevo);
             this.GbBotones.Controls.Add(this.btnEditar);
@@ -171,23 +173,15 @@
             this.GbBotones.TabStop = false;
             this.GbBotones.Text = "Botones";
             // 
-            // btnEditar
+            // btnAgregar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(100, 91);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 0;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(100, 31);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevo.TabIndex = 1;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(100, 70);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnBorrar
             // 
@@ -197,6 +191,25 @@
             this.BtnBorrar.TabIndex = 2;
             this.BtnBorrar.Text = "Borrar";
             this.BtnBorrar.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Location = new System.Drawing.Point(100, 31);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(100, 108);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 0;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -242,25 +255,21 @@
             this.GbProductosRegistrados.Text = "Productos Registrados";
             this.GbProductosRegistrados.Enter += new System.EventHandler(this.GbProductosRegistrados_Enter);
             // 
-            // chbID
+            // btnBuscar
             // 
-            this.chbID.AutoSize = true;
-            this.chbID.Location = new System.Drawing.Point(54, 19);
-            this.chbID.Name = "chbID";
-            this.chbID.Size = new System.Drawing.Size(37, 17);
-            this.chbID.TabIndex = 10;
-            this.chbID.Text = "ID";
-            this.chbID.UseVisualStyleBackColor = true;
+            this.btnBuscar.Location = new System.Drawing.Point(637, 37);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 14;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // chbPrecio
+            // textBox1
             // 
-            this.chbPrecio.AutoSize = true;
-            this.chbPrecio.Location = new System.Drawing.Point(504, 19);
-            this.chbPrecio.Name = "chbPrecio";
-            this.chbPrecio.Size = new System.Drawing.Size(56, 17);
-            this.chbPrecio.TabIndex = 11;
-            this.chbPrecio.Text = "Precio";
-            this.chbPrecio.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(54, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(530, 20);
+            this.textBox1.TabIndex = 13;
             // 
             // chbNombre
             // 
@@ -272,21 +281,25 @@
             this.chbNombre.Text = "Nombre";
             this.chbNombre.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // chbPrecio
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(530, 20);
-            this.textBox1.TabIndex = 13;
+            this.chbPrecio.AutoSize = true;
+            this.chbPrecio.Location = new System.Drawing.Point(504, 19);
+            this.chbPrecio.Name = "chbPrecio";
+            this.chbPrecio.Size = new System.Drawing.Size(56, 17);
+            this.chbPrecio.TabIndex = 11;
+            this.chbPrecio.Text = "Precio";
+            this.chbPrecio.UseVisualStyleBackColor = true;
             // 
-            // btnBuscar
+            // chbID
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(637, 37);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 14;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.chbID.AutoSize = true;
+            this.chbID.Location = new System.Drawing.Point(54, 19);
+            this.chbID.Name = "chbID";
+            this.chbID.Size = new System.Drawing.Size(37, 17);
+            this.chbID.TabIndex = 10;
+            this.chbID.Text = "ID";
+            this.chbID.UseVisualStyleBackColor = true;
             // 
             // FrmMantenimientoProducto
             // 
@@ -339,5 +352,6 @@
         private System.Windows.Forms.CheckBox chbNombre;
         private System.Windows.Forms.CheckBox chbPrecio;
         private System.Windows.Forms.CheckBox chbID;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

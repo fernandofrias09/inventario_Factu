@@ -24,7 +24,37 @@ namespace Inventario_facturacion
             da.Fill(dt);
             return dt;
         }
-        
+        public static int Agregar(string Consulta)
+        {
+            int a = 0;
+            try
+            {
+               
+                SqlCommand cmd = new SqlCommand(Consulta, Conexion.Conectar());
+                a = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
+                throw ex;
+            }
+            return a;
+        }
+        public static List<Rol> Obtener(string consultarol)
+        {
+            List<Rol> lista = new List<Rol>();          
+            SqlCommand cmd = new SqlCommand(consultarol, Conexion.Conectar());
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Rol rl = new Rol();
+                rl.ID = dr.GetInt32(0);
+                rl.Nombre = dr.GetString(1);
+                lista.Add(rl);
+            }
+
+            return lista;
+        }
+        
     }
 }
