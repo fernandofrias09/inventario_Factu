@@ -16,7 +16,7 @@ namespace Inventario_facturacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMantenimientoUsuario());
+            Application.Run(new FrmLogin());
         }
     }
 }

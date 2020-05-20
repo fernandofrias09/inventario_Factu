@@ -50,55 +50,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexion.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Modelos\Combos.cs" />
+    <Compile Include="Modelos\Conexion.cs" />
+    <Compile Include="Modelos\Factura.cs" />
+    <Compile Include="Vistas\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Vistas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMantenimientoProducto.cs">
+    <Compile Include="Vistas\FrmMantenimientoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMantenimientoProducto.Designer.cs">
+    <Compile Include="Vistas\FrmMantenimientoProducto.Designer.cs">
       <DependentUpon>FrmMantenimientoProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMantenimientoRoles.cs">
+    <Compile Include="Vistas\FrmMantenimientoRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMantenimientoRoles.Designer.cs">
+    <Compile Include="Vistas\FrmMantenimientoRoles.Designer.cs">
       <DependentUpon>FrmMantenimientoRoles.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMantenimientoUsuario.cs">
+    <Compile Include="Vistas\FrmMantenimientoUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMantenimientoUsuario.Designer.cs">
+    <Compile Include="Vistas\FrmMantenimientoUsuario.Designer.cs">
       <DependentUpon>FrmMantenimientoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuPrincipal.cs">
+    <Compile Include="Modelos\I_Combos.cs" />
+    <Compile Include="Modelos\I_ComFac.cs" />
+    <Compile Include="Modelos\I_ProFac.cs" />
+    <Compile Include="Vistas\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuPrincipal.Designer.cs">
+    <Compile Include="Vistas\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="producto.cs" />
+    <Compile Include="Modelos\producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rol.cs" />
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="Modelos\Rol.cs" />
+    <Compile Include="Modelos\Usuario.cs" />
+    <EmbeddedResource Include="Vistas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoProducto.resx">
+    <EmbeddedResource Include="Vistas\FrmMantenimientoProducto.resx">
       <DependentUpon>FrmMantenimientoProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoRoles.resx">
+    <EmbeddedResource Include="Vistas\FrmMantenimientoRoles.resx">
       <DependentUpon>FrmMantenimientoRoles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoUsuario.resx">
+    <EmbeddedResource Include="Vistas\FrmMantenimientoUsuario.resx">
       <DependentUpon>FrmMantenimientoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuPrincipal.resx">
+    <EmbeddedResource Include="Vistas\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
