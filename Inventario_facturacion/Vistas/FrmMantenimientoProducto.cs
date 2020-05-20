@@ -12,7 +12,9 @@ namespace Inventario_facturacion
 {
     public partial class FrmMantenimientoProducto : Form
     {
-        string consulta = "select * from Producto";
+        string consulta = "select * from Producto";   
+        
+       
         public FrmMantenimientoProducto()
         {
             InitializeComponent();
@@ -66,12 +68,14 @@ namespace Inventario_facturacion
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+
             producto pd = new producto();
             pd.ID = Convert.ToInt32(TxtID.Text);
             pd.Nombre = txtNombre.Text;
             pd.Costo = Convert.ToDouble(txtCosto.Text);
             pd.Cantidad = Convert.ToInt32(txtCantidad.Text);
             pd.Precio = Convert.ToDouble(txtPrecio.Text);
+
             string consultaInsert = "INSERT INTO Producto(ID, Nombre, Costo, Cantidad, Precio) " +
                 "Values('"+pd.ID+"','"+pd.Nombre+"','"+pd.Costo+"','"+pd.Cantidad+"','"+pd.Precio+"' )";
             Conexion.Agregar(consultaInsert);
@@ -85,6 +89,93 @@ namespace Inventario_facturacion
                 MessageBox.Show(ex.Message.ToString());
                 throw;
              }
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+
+            producto pd = new producto();
+            pd.ID = Convert.ToInt32(TxtID.Text);
+            string consultaDelete = "DELETE from Producto where Producto.ID = '"+pd.ID+"' ";
+            Conexion.Agregar(consultaDelete);
+            try
+            {
+                Conexion.Conectar();
+                dgvProducto.DataSource = Conexion.LlenarDGV(consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+
+        }
+
+        private void DgvProducto_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int IndiceDGV = e.RowIndex;
+
+            TxtID.Text = dgvProducto.Rows[IndiceDGV].Cells[0].Value.ToString(); //TextBox1 = Ap.ID
+            txtNombre.Text = dgvProducto.Rows[IndiceDGV].Cells[1].Value.ToString(); //TextBox2 = Ap.Nombre
+            txtCosto.Text = dgvProducto.Rows[IndiceDGV].Cells[2].Value.ToString(); //TextBox3 = Costo
+            txtCantidad.Text = dgvProducto.Rows[IndiceDGV].Cells[3].Value.ToString(); //TextBox3 = Cantidad
+            txtPrecio.Text = dgvProducto.Rows[IndiceDGV].Cells[4].Value.ToString(); //TextBox3 = Precio
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            producto pd = new producto();
+            pd.ID = Convert.ToInt32(TxtID.Text);
+            pd.Nombre = txtNombre.Text;
+            pd.Costo = Convert.ToDouble(txtCosto.Text);
+            pd.Cantidad = Convert.ToInt32(txtCantidad.Text);
+            pd.Precio = Convert.ToDouble(txtPrecio.Text);
+
+            string consultaEditar = "UPDATE Producto SET Nombre = '"+pd.Nombre+ "', Costo = '"+pd.Costo+"'," +
+                " Cantidad ='" +pd.Cantidad+"', Precio ='"+pd.Precio+"'" +
+                " WHERE ID ='"+pd.ID+"' ";
+            Conexion.Agregar(consultaEditar);
+            try
+            {
+                Conexion.Conectar();
+                dgvProducto.DataSource = Conexion.LlenarDGV(consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+            if(chbID.CheckState == CheckState.Checked)
+            {
+                int ID = Convert.ToInt32(txtBusqueda.Text);
+                String consulta = "select * from Producto Where ID='"+ID+"'";
+                
+                dgvProducto.DataSource = Conexion.LlenarDGV(consulta);
+
+            }
+            else if (chbNombre.CheckState == CheckState.Checked)
+            {
+                String Nombre = txtBusqueda.Text;
+                String consulta = "select * from Producto Where Nombre='" + Nombre + "'";
+                dgvProducto.DataSource = Conexion.LlenarDGV(consulta);
+            }
+            else if (chbPrecio.CheckState == CheckState.Checked)
+            {
+                Double Precio = Convert.ToDouble( txtBusqueda.Text);
+                String consulta = "select * from Producto Where Precio='" + Precio + "'";
+                dgvProducto.DataSource = Conexion.LlenarDGV(consulta);
+            }
+
+        }
+
+        private void ChbID_CheckedChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

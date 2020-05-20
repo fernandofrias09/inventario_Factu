@@ -39,12 +39,13 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.dgvRoles = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.chbNombre = new System.Windows.Forms.CheckBox();
             this.chbID = new System.Windows.Forms.CheckBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -158,45 +159,41 @@
             this.btnBorrar.TabIndex = 2;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(59, 82);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // dgvRoles
             // 
             this.dgvRoles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRoles.Location = new System.Drawing.Point(12, 324);
+            this.dgvRoles.Location = new System.Drawing.Point(12, 363);
             this.dgvRoles.Name = "dgvRoles";
-            this.dgvRoles.Size = new System.Drawing.Size(517, 123);
+            this.dgvRoles.Size = new System.Drawing.Size(489, 115);
             this.dgvRoles.TabIndex = 5;
+            this.dgvRoles.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoles_CellContentClick);
+            this.dgvRoles.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoles_CellContentDoubleClick);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtBusqueda);
             this.groupBox3.Controls.Add(this.btnBuscar);
             this.groupBox3.Controls.Add(this.chbNombre);
             this.groupBox3.Controls.Add(this.chbID);
             this.groupBox3.Location = new System.Drawing.Point(12, 259);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(489, 59);
+            this.groupBox3.Size = new System.Drawing.Size(489, 98);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Busqueda";
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(348, 24);
+            this.btnBuscar.Location = new System.Drawing.Point(381, 45);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 2;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // chbNombre
             // 
@@ -218,11 +215,28 @@
             this.chbID.Text = "ID";
             this.chbID.UseVisualStyleBackColor = true;
             // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(6, 47);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(336, 20);
+            this.txtBusqueda.TabIndex = 3;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(59, 82);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
             // FrmMantenimientoRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 450);
+            this.ClientSize = new System.Drawing.Size(507, 482);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.dgvRoles);
             this.Controls.Add(this.groupBox2);
@@ -255,12 +269,13 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridView dgvRoles;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.CheckBox chbNombre;
         private System.Windows.Forms.CheckBox chbID;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.TextBox txtBusqueda;
     }
 }

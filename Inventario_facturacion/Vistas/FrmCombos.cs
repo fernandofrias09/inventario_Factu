@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventario_facturacion
+namespace Inventario_facturacion.Vistas
 {
-    public partial class FrmCombos : Form
+    public partial class frmCombos : Form
     {
-        public FrmCombos()
+        public frmCombos()
         {
             InitializeComponent();
         }

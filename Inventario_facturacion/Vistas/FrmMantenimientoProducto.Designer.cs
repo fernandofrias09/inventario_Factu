@@ -49,7 +49,7 @@
             this.dgvProducto = new System.Windows.Forms.DataGridView();
             this.GbProductosRegistrados = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.chbNombre = new System.Windows.Forms.CheckBox();
             this.chbPrecio = new System.Windows.Forms.CheckBox();
             this.chbID = new System.Windows.Forms.CheckBox();
@@ -191,6 +191,7 @@
             this.BtnBorrar.TabIndex = 2;
             this.BtnBorrar.Text = "Borrar";
             this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // btnNuevo
             // 
@@ -210,6 +211,7 @@
             this.btnEditar.TabIndex = 0;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // panel1
             // 
@@ -239,11 +241,12 @@
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.Size = new System.Drawing.Size(799, 123);
             this.dgvProducto.TabIndex = 3;
+            this.dgvProducto.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProducto_CellContentDoubleClick);
             // 
             // GbProductosRegistrados
             // 
             this.GbProductosRegistrados.Controls.Add(this.btnBuscar);
-            this.GbProductosRegistrados.Controls.Add(this.textBox1);
+            this.GbProductosRegistrados.Controls.Add(this.txtBusqueda);
             this.GbProductosRegistrados.Controls.Add(this.chbNombre);
             this.GbProductosRegistrados.Controls.Add(this.chbPrecio);
             this.GbProductosRegistrados.Controls.Add(this.chbID);
@@ -263,13 +266,14 @@
             this.btnBuscar.TabIndex = 14;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
-            // textBox1
+            // txtBusqueda
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(530, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtBusqueda.Location = new System.Drawing.Point(54, 55);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(530, 20);
+            this.txtBusqueda.TabIndex = 13;
             // 
             // chbNombre
             // 
@@ -300,6 +304,7 @@
             this.chbID.TabIndex = 10;
             this.chbID.Text = "ID";
             this.chbID.UseVisualStyleBackColor = true;
+            this.chbID.CheckedChanged += new System.EventHandler(this.ChbID_CheckedChanged);
             // 
             // FrmMantenimientoProducto
             // 
@@ -348,7 +353,7 @@
         private System.Windows.Forms.DataGridView dgvProducto;
         private System.Windows.Forms.GroupBox GbProductosRegistrados;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.CheckBox chbNombre;
         private System.Windows.Forms.CheckBox chbPrecio;
         private System.Windows.Forms.CheckBox chbID;

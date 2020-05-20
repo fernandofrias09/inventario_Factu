@@ -40,6 +40,24 @@ namespace Inventario_facturacion
             }
             return a;
         }
+
+        public static int Borrar(string Consulta)
+        {
+            int a = 0;
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand(Consulta, Conexion.Conectar());
+                a = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            return a;
+
+        }
         public static List<Rol> Obtener(string consultarol)
         {
             List<Rol> lista = new List<Rol>();          

@@ -70,5 +70,75 @@ namespace Inventario_facturacion
                 throw;
             }
         }
+
+        private void DgvRoles_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            Rol rl = new Rol();
+            rl.ID = Convert.ToInt32(txtIDRoles.Text);
+            rl.Nombre = txtNombreRoles.Text;
+            string ConsultaEditar = "update Roles Set Nombre = '"+rl.Nombre+"' where ID='"+rl.ID+"'";
+            Conexion.Agregar(ConsultaEditar);
+            try
+            {
+                Conexion.Conectar();
+                dgvRoles.DataSource = Conexion.LlenarDGV(consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+
+        }
+
+        private void DgvRoles_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int IndiceDGV = e.RowIndex;
+
+            txtIDRoles.Text = dgvRoles.Rows[IndiceDGV].Cells[0].Value.ToString(); //TextBox1 = Ap.ID
+            txtNombreRoles.Text = dgvRoles.Rows[IndiceDGV].Cells[1].Value.ToString(); //TextBox2 = Ap.Nombre
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            Rol rl = new Rol();
+            rl.ID = Convert.ToInt32(txtIDRoles.Text);
+            rl.Nombre = txtNombreRoles.Text;
+            string ConsultaEliminar = "Delete from Roles where ID ='"+rl.ID+"'";
+            Conexion.Agregar(ConsultaEliminar);
+            try
+            {
+                Conexion.Conectar();
+                dgvRoles.DataSource = Conexion.LlenarDGV(consulta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                throw;
+            }
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (chbID.CheckState == CheckState.Checked)
+            {
+                int ID = Convert.ToInt32(txtBusqueda.Text);
+                String consulta = "select * from Roles Where ID='" + ID + "'";
+
+                dgvRoles.DataSource = Conexion.LlenarDGV(consulta);
+
+            }
+            else if (chbNombre.CheckState == CheckState.Checked)
+            {
+                String Nombre = txtBusqueda.Text;
+                String consulta = "select * from Roles Where Nombre='" + Nombre + "'";
+                dgvRoles.DataSource = Conexion.LlenarDGV(consulta);
+            }
+        }
     }
 }

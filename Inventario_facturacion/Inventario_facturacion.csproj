@@ -59,6 +59,12 @@
     <Compile Include="Vistas\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FrmCombos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmCombos.Designer.cs">
+      <DependentUpon>FrmCombos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FrmMantenimientoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Modelos\Usuario.cs" />
     <EmbeddedResource Include="Vistas\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmCombos.resx">
+      <DependentUpon>FrmCombos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FrmMantenimientoProducto.resx">
       <DependentUpon>FrmMantenimientoProducto.cs</DependentUpon>
